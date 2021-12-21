@@ -128,15 +128,7 @@ class Player(pygame.sprite.Sprite):
 
     def update(self, pos_x, pos_y):
         self.last_x, self.last_y = self.rect.x, self.rect.y
-        print('ласт создался', )
         self.rect.x, self.rect.y = pos_x, pos_y
-
-
-class Last(pygame.sprite.Sprite):
-    def __init__(self, pos_x, pos_y):
-        super().__init__()
-        self.image = player_image
-        self.rect = self.image.get_rect().move(tile_width * pos_x + 15, tile_height * pos_y + 5)
 
 
 class Camera:
